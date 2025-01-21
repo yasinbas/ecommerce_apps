@@ -1,2 +1,2 @@
 # ecommerce_app
-A modern e-commerce app built with Rail
+A modern e-commerce app built with Rails
