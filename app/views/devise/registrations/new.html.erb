@@ -1,0 +1,25 @@
+<div class="d-flex justify-content-center align-items-center vh-100 bg-light">
+  <div class="card shadow-lg p-4" style="max-width: 400px; width: 100%;">
+    <h3 class="text-center mb-4">Sign Up</h3>
+    <%= form_with scope: :user, url: registration_path(:user), local: true do |f| %>
+      <div class="mb-3">
+        <%= f.label :email, class: "form-label" %>
+        <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "Enter your email" %>
+      </div>
+      <div class="mb-3">
+        <%= f.label :password, class: "form-label" %>
+        <%= f.password_field :password, autocomplete: "new-password", class: "form-control", placeholder: "Create a password" %>
+      </div>
+      <div class="mb-3">
+        <%= f.label :password_confirmation, "Confirm Password", class: "form-label" %>
+        <%= f.password_field :password_confirmation, class: "form-control", placeholder: "Confirm your password" %>
+      </div>
+      <div class="d-grid">
+        <%= f.submit "Sign Up", class: "btn btn-success btn-lg" %>
+      </div>
+    <% end %>
+    <div class="text-center mt-3">
+      <%= link_to "Login", new_user_session_path, class: "text-decoration-none text-primary" %>
+    </div>
+  </div>
+</div>
